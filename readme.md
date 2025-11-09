@@ -8,7 +8,7 @@
 
 ![Vista previa del proyecto](preview.jpg)
 🌐 **Demo en vivo:**  
-[👉 Ver proyecto en Netlify](https://app.netlify.com/projects/gourmet-hub-landing-page/overview)
+[👉 Ver proyecto en Netlify](https://gourmet-hub-landing-page.netlify.app/)
 
 
 ## 🚀 Funcionalidades principales
