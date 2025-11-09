@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Hub - Recetas y Productos</title>
+
+    <!-- Importación de fuentes e iconos -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style1.css">
+    <script src="./js/data.js"></script>
+
+    </head>
+    
+    <body>
+    
+        <header>
+            <h1><i class="fa-solid fa-utensils"></i> Gourmet Hub</h1>
+    
+            <div class="controls-and-cart">
+                <!-- Botones de Modo -->
+                <div class="mode-buttons">
+                    <!-- Selector JS: #btn-day-mode -->
+                    <button id="btn-day-mode">Día</button>
+                    <!-- Selector JS: #btn-night-mode -->
+                    <button id="btn-night-mode">Noche</button>
+                    <!-- Selector JS: #btn-random-color -->
+                    <button id="btn-random-color"><i class="fa-solid fa-palette"></i></button>
+                </div>
+    
+                <!-- Botón Vaciar Carrito (Selector JS: #btn-empty-cart) -->
+                <button id="btn-empty-cart"><i class="fa-solid fa-trash-can"></i> Vaciar</button>
+    
+                <!-- Icono del Carrito (Selector JS: #cart-icon-container, #cart-icon) -->
+                <div id="cart-icon-container">
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                    <!-- Contador (Selector JS: #cart-count) -->
+                    <span id="cart-count">0</span>
+    
+                    <!-- Popover del Carrito (Selector JS: #cart-dropdown) -->
+                    <div id="cart-dropdown">
+                        <h4>Mi Carrito</h4>
+    
+                        <!-- Contenedor de Items (Selector JS: #cart-items-list) -->
+                        <div id="cart-items-list">
+                            <!-- Items inyectados dinámicamente -->
+                            <p class="empty-state" style="border: none;">Carrito vacío</p>
+                        </div>
+    
+                        <!-- Resumen de Totales (Selectores JS: #subtotal, #iva, #total) -->
+                        <p class="cart-item-row"><span>Subtotal:</span><span id="subtotal">0.00 €</span></p>
+                        <p class="cart-item-row"><span>IVA (10%):</span><span id="iva">0.00 €</span></p>
+                        <p class="summary-row"><span>Total:</span><span id="total">0.00 €</span></p>
+    
+                        <!-- Botón Comprar (Selector JS: #btn-checkout) -->
+                        <button id="btn-checkout">Efectuar Compra</button>
+    
+                    </div>
+                </div>
+    
+            </div>
+        </header>
+    
+        <div class="main-layout">
+            <aside class="filters-sidebar">
+                <h3>Filtros de Recetas</h3>
+                <!-- Formulario (Selector JS: #filter-form) -->
+                <form id="filter-form">
+                    <div class="form-group">
+                        <label for="recipe-name">Nombre de la Receta</label>
+                        <!-- Input (Selector JS: name="recipe-name") -->
+                        <input type="text" id="recipe-name" name="recipe-name" placeholder="Ej: Salmón o Lasagna">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="category-select">Categoría</label>
+                        <!-- Select (Selector JS: name="category-select") -->
+                        <select id="category-select" name="category-select">
+                            <option value="todas">Todas las categorías</option>
+                            <option value="Entrantes">Entrantes</option>
+                            <option value="Principal">Plato Principal</option>
+                            <option value="Postres">Postres</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label>Precio (Ingredientes clave, €)</label>
+                        <div class="price-range">
+                            <!-- Input Min (Selector JS: name="price-min") -->
+                            <input type="number" id="price-min" name="price-min" placeholder="Mín." min="0" >
+                            <!-- Input Max (Selector JS: name="price-max") -->
+                            <input type="number" id="price-max" name="price-max" placeholder="Máx." min="0" >
+                        </div>
+                    </div>
+    
+                    <!-- Botón de Filtrar (Selector JS: #btn-filter) -->
+                    <button type="submit" id="btn-filter">Buscar Recetas</button>
+                </form>
+            </aside>
+    
+            <main class="content-area">
+    
+                <!-- Sección de Resultados de Búsqueda (Selector JS: #search-section, #search-grid) -->
+                <!-- <section id="search-section" class="service-section" style="display:none;">
+                    <h2><i class="fa-solid fa-magnifying-glass"></i> Resultados de Búsqueda</h2>
+                    <div class="grid-container" id="search-grid">
+                    }Contenido inyectado por JS -->
+                    <!-- </div>
+                </section> -->
+    
+                <!-- Sección de Destacados (Selector JS: #featured-section, #featured-grid) -->
+                <section id="featured-section" class="service-section">
+                    <h2><i class="fa-solid fa-star"></i> Recetas Destacadas</h2>
+                    <div class="grid-container" id="featured-grid">
+                        <!-- Contenido inyectado por JS -->
+                    </div>
+                </section>
+    
+                <!-- Sección de Todas las Recetas (Selector JS: #all-section, #all-grid) -->
+                <section id="all-section" class="service-section">
+                    <h2><i class="fa-solid fa-book-open"></i> Todas las Recetas</h2>
+                    <div class="grid-container" id="all-grid">
+                        <!-- Contenido inyectado por JS -->
+                    </div>
+                </section>
+            </main>
+        </div>
+
+
+        <script src="./js/app.js"></script>
+        </body>
+        
+        </html>
