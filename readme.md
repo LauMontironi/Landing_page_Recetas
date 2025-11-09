@@ -7,6 +7,7 @@
 ## 🖼️ Vista previa
 
 ![Vista previa del proyecto](preview.jpg)
+![enlace web ]('https://app.netlify.com/projects/gourmet-hub-landing-page/overview')
 
 ## 🚀 Funcionalidades principales
 
